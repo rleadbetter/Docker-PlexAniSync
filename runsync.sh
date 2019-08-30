@@ -5,7 +5,7 @@ python settingsupdater.py
 echo "Looking for custom mapping"
 if [ ! -z "${CUSTOM_MAPPING_URL}" ]
 then
-  wget -O /plexanisync/custom_mappings.ini ${CUSTOM_MAPPING_URL}
+  cp ${CUSTOM_MAPPING_URL} /plexanisync/custom_mappings.ini
 else
   echo "No custom mapping found"
 fi

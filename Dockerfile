@@ -10,11 +10,8 @@ ENV PLEX_SECTION=Anime \
 ENV PATH="${PATH}:~/.local/bin"
 
 RUN apt-get update &&\
-    apt-get install -y wget unzip &&\
-    wget https://github.com/RickDB/PlexAniSync/archive/master.zip &&\
-    unzip master.zip &&\
-    rm master.zip &&\
-    mv /PlexAniSync-master /plexanisync &&\
+    apt-get install -y wget git &&\
+    git clone https://github.com/RickDB/PlexAniSync.git /plexanisync &&\
     cd /plexanisync &&\
     python3 -m pip install -r requirements.txt &&\
     cd ..
