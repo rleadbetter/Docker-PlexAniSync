@@ -11,7 +11,7 @@ ENV PATH="${PATH}:~/.local/bin"
 
 RUN apt-get update &&\
     apt-get install -y wget git &&\
-    git clone https://github.com/RickDB/PlexAniSync.git /plexanisync &&\
+    git clone https://github.com/rleadbetter/PlexAniSync.git /plexanisync &&\
     cd /plexanisync &&\
     python3 -m pip install -r requirements.txt &&\
     cd ..
